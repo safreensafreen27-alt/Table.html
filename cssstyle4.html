@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Variables Demo</title>
+  <style>
+    :root {
+      --bg-color: #007bff;
+      --text-color: #ffffff;
+      --button-color: #cccccc;
+      --button-text: #333333;
+      --padding: 20px;
+      --font-size: 20px;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .message {
+      font-size: var(--font-size);
+    }
+
+    .btn {
+      background-color: var(--button-color);
+      color: var(--button-text);
+      padding: var(--padding);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background-color: #bbb;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="message">This div uses CSS variables for styling!</div>
+    <button class="btn">Click Me</button>
+  </div>
+
+</body>
+</html>
